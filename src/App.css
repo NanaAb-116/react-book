@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.form-container {
+  background-color: #fffffe;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  width: 20rem;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+h1 {
+  color: black;
+  font-size: 2rem;
+}
+label {
+  color: #1b2d45;
+  font-size: larger;
+}
+input {
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 8px;
+  outline: 0;
+  width: 90%;
+  /* height: 1rem; */
+}
+.form .btns {
+  margin: 1rem 0;
+  display: flex;
+}
+.form button {
+  font-size: small;
+  margin: 12px;
+  height: 3rem;
+  width: 10rem;
+  border: 0;
+  background-color: black;
   color: white;
+  border-radius: 4px;
+}
+.form button:active {
+  box-shadow: inset 1px 1px 7px black;
+}
+img {
+  height: 1rem;
+  margin-right: 8px;
+}
+.sign-out {
+  display: flex;
+  justify-content: flex-end;
+}
+.signOut {
+  border-radius: 4px;
+  width: 10rem;
+  align-items: flex-end;
+}
+svg {
+  height: 2rem;
+  margin-right: 8px;
+}
+.alert {
+  margin: 0;
+  padding: 0rem;
+  height: 1.5rem;
+}
+.alert p {
+  margin: 0;
+  color: rgb(255, 28, 28);
+  font-size: small;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+  position: relative;
+  width: 70%;
+  margin: 1rem auto;
+  border: 10px solid rgb(183, 181, 181);
+  height: 3rem;
+  border-radius: 50px;
+}
+.search input {
+  border: 0;
+  position: absolute;
+  top: 5px;
+  left: 3.5rem;
+  background-color: transparent;
+  width: 82%;
+  display: block;
+  margin: 0;
+  font-size: 1.3rem;
+}
+.searchIcon {
+  pointer-events: none;
+  width: 4rem;
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  left: 24px;
+}
+.searchIcon svg {
+  width: 1.8rem;
+}
+.searchBtn {
+  cursor: pointer;
+  position: absolute;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  top: 4px;
+  right: 6px;
+  height: 2.5rem;
+  width: 10rem;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addBook {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  margin: auto;
+}
+.addBookBtn {
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 2.5rem;
+  padding: 0 10px;
+}
+
+table {
+  width: 80%;
+  margin: 5rem auto;
+}
+th {
+  font-size: 2rem;
+}
+td {
+  font-size: 1.2rem;
+}
+th,
+td {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  text-align: left;
+  padding: 8px;
+}
+.title {
+  width: 15%;
+}
+.author {
+  width: 15%;
+}
+.description {
+  width: 55%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(10px);
+}
+.addBookModal {
+  position: relative;
+  padding: 8px;
+  background-color: white;
+  height: 25rem;
+  width: 35rem;
+  border-radius: 10px;
+  box-shadow: -4px -2px 15px 6px rgba(0, 0, 0, 0.5);
+}
+.closeBtn {
+  position: absolute;
+  cursor: pointer;
+  right: 1rem;
+  top: 1rem;
+}
+.closeBtn svg {
+  width: 1.5rem;
+}
+.addBookForm {
+  width: 95%;
+  margin: auto;
+}
+.addBookForm input,
+.addBookForm textarea {
+  padding: 8px;
+  outline: 0;
+  display: block;
+  width: 95%;
+  border-bottom: 1px solid rgba(132, 132, 132, 0.3);
+}
+.addBookForm textarea {
+  margin: 16px 0;
+  height: 10rem;
+  background-color: transparent;
+  border: 1px solid rgba(132, 132, 132, 0.3);
+}
+.addBookForm button {
+  border: 0;
+  background-color: black;
+  color: white;
+  height: 2rem;
+  width: 8rem;
 }
